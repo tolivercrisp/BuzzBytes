@@ -6,13 +6,13 @@ const userSchema = new Schema(
             type: String,
             unique: true,
             required: true,
-            max_length: 15,
+            maxLength: 15,
         },
         email: {
             type: String,
             unique: true,
             required: true,
-            max_length: 50,
+            maxLength: 50,
             // 'match' uses a regex email pattern to validate if email input is a valid email
             match: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 
         },
