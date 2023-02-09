@@ -1,8 +1,8 @@
 const userArray = [
     'reekinator',
     'CosmicCometRider',
-    'StarryNightStargazer65'
-    'Potato22',
+    'StarryNightStargazer65',
+    'PotatoPerson22',
     'RainbowRhapsody',
     'SkywardSoarer',
     'LunarLullaby',
