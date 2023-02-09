@@ -9,7 +9,7 @@ const {
     updateUser,
     deleteUser,
     // api/users/:userId/friends/:friendId
-    addNewFriend,
+    addFriend,
     deleteFriend,
 } = require("../../controllers/userController");
 
@@ -30,7 +30,7 @@ router
 // Routes that use two parameters -- ':userId' and ':friendId'
 router
     .route('/:userId/friends/:friendId')
-    .post(addNewFriend)
+    .post(addFriend)
     .delete(deleteFriend);
 
 module.exports = router;
