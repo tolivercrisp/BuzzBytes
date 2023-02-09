@@ -8,6 +8,7 @@ const {
     // /api/thoughts/:thoughtId
     getSingleThought,
     updateThought,
+    deleteThought,
     // /api/thoughts/:thoughtId/reactions
     createReaction,
     deleteReaction, 
