@@ -5,6 +5,6 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 // If invalid route is used, send this
-router.use((req, res) => res.send('Wrong route!'));
+router.use((req, res) => res.send('Nope.'));
 
 module.exports = router;

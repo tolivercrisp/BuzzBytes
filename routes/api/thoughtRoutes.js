@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-const { route } = require('..');
 const {
     // /api/thoughts
     getThoughts,
@@ -19,7 +18,6 @@ const {
 router
     .route('/')
     .get(getThoughts)
-    // (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
     .post(createThought);
 
 // Routes that use the parameter 'thoughtId'
@@ -31,9 +29,9 @@ router
 
 // Routes that use 'thoughtId' parameter to link to 'reactions'
 router
-    .route('/api/thoughts/:thoughtId/reactions')
+    .route('/:thoughtId/reactions')
     .post(createReaction)
     .delete(deleteReaction)
 
-
+module.exports = router;
 

@@ -7,7 +7,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
             minLength: 1,
-            maxLength: 250,
+            maxLength: 500,
         },
         createdAt: {
             type: Date,
@@ -27,9 +27,13 @@ const thoughtSchema = new Schema(
 );
 
 // Create a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
-thoughtSchema.virtual("reactionCount").get(function(){
-    return this.reactions.length;
-});
+thoughtSchema
+  .virtual('reactionCount')
+  // Getter
+  .get(function () {
+    return `${this.reactions.length}`;
+  });
+
 
 const Thought = model('thought', thoughtSchema);
 
